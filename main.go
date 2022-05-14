@@ -6,8 +6,6 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-
-	codegen "github.com/nullstyle/go-codegen"
 )
 
 var includes = flag.String(
@@ -51,7 +49,7 @@ func main() {
 			log.Fatal(err)
 		}
 
-		err = codegen.Process(arg, searchPath)
+		err = Process(arg, searchPath)
 
 		if err != nil {
 			log.Fatalln(err)
